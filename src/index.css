@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0b0d11;
+    color: #f3efe6;
+    overflow: hidden;
+    user-select: none;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Precision Horological Range Sliders */
+input[type='range'].horology-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type='range'].horology-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(212, 163, 89, 0.22);
+  border: 1px solid rgba(212, 163, 89, 0.35);
+}
+
+input[type='range'].horology-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #d4a359;
+  border: 2px solid #0b0d11;
+  box-shadow: 0 0 0 1px #d4a359;
+  margin-top: -6px;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease;
+}
+
+input[type='range'].horology-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+  background: #ecc37e;
+}
+
+input[type='range'].horology-slider:focus-visible {
+  outline: 2px solid #d4a359;
+  outline-offset: 4px;
+}
+

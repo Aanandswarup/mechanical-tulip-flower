@@ -1,0 +1,6 @@
+{
+  "name": "Valkenburg No. IV — Mechanical Tulip Automaton",
+  "description": "Interactive 3D horological botanical automaton featuring a four-bar linkage corolla, planetary gear train, rotating tourbillon pistil, and exploded assembly inspection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
